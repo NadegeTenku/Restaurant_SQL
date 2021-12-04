@@ -3,12 +3,13 @@ const {sequelize, DataTypes, Model} = require('./db')
 class Restaurant extends Model {}
 
 Restaurant.init({
-    Restaurant_name: DataTypes.STRING
-    // menu_items: DataTypes.STRING,
-    // price: DataTypes.INTEGER
-}, 
+    restaurantName: DataTypes.STRING, //attributes / property of the restaurant
+    location: DataTypes.STRING,
+    capacity: DataTypes.INTEGER
 
-    {sequelize,
+  
+}, {
+    sequelize,
     timestamps: false
 })
 

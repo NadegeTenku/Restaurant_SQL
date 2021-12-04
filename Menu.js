@@ -1,16 +1,13 @@
 const {sequelize, DataTypes, Model} = require('./db')
 
-class Menu extends Model {
-}
+class Menu extends Model {}
 
 Menu.init({
-    menu_name: DataTypes.STRING
-
-}, 
-
-    {sequelize, 
-        modelName:"Menu",
-        timestamps: false
+    category: DataTypes.STRING,
+    menuType: DataTypes.STRING
+}, {
+    sequelize,
+    timestamps: false
 })
 
 module.exports = {Menu}
