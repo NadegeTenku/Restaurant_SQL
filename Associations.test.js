@@ -7,7 +7,7 @@ describe('Restaurant Database', () => {
         
         await sequelize.sync({force:true})
         
-        const arrayOfRsetaurants =[
+        const arrayOfRestaurants =[
             {restaurantName: 'Dennys', location: 'Mansfield', capacity: 50},
             {restaurantName: 'Fire Tacos', location: 'Grand Prairie', capacity: 70},
             {restaurantName: 'Jakes', location: 'Mansfield', capacity: 60}
@@ -24,9 +24,9 @@ describe('Restaurant Database', () => {
     })
 
     test('restaurants have capacity', async() => {
-        const testRestaurant = await Restaurant.findOne({where: {capacity: '50'}});
-        const testRestaurant = await Restaurant.findOne({where: {capacity: '60'}});
-        expect(testRestaurant.capacity).toBe('Dennys')
+        const testRestaurant = await Restaurant.findOne({where: {capacity: 50}});
+        const testRestaurant = await Restaurant.findOne({where: {capacity: 60}});
+        expect(testRestaurant.capacity).toBe(50)
         expect(testRestaurant.capacity).toBe('Jakes')
     })
 

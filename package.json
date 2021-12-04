@@ -14,5 +14,13 @@
     "sequelize": "^6.12.0-alpha.1",
     "sqlite3": "^5.0.2"
   },
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NadegeTenku/Restaurant_sql.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NadegeTenku/Restaurant_sql/issues"
+  },
+  "homepage": "https://github.com/NadegeTenku/Restaurant_sql#readme"
 }
