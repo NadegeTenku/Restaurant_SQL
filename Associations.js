@@ -6,7 +6,7 @@ const { Menu } = require('./Menu')
 // const { Customer} = require('./Customer')
 // const { Orders } = require('./Orders')
 
-Menu.belongsTo(Restaurant)
+Menu.belongsTo(Restaurant),
 
 Restaurant.hasMany(Menu)
 
