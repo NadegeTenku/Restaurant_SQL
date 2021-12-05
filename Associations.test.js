@@ -17,17 +17,18 @@ describe('Restaurant Database', () => {
     })
 
     test('restaurants have name', async() => {
-        const testRestaurant = await Restaurant.findOne({where: {name: 'Dennys'}});
-        const testRestaurant = await Restaurant.findOne({where: {name: 'Jakes'}});
-        expect(testRestaurant.name).toBe('Dennys')
-        expect(testRestaurant.name).toBe('Jakes')
+        const testRestaurant = await Restaurant.findOne({where: {restaurantName: 'Dennys'}});
+        // const testRestaurant = await Restaurant.findOne({where: {restaurantName: 'Jakes'}});
+        expect(testRestaurant.restaurantName).toBe('Dennys')
+        // expect(testRestaurant.restaurantName).toBe('Jakes')
+        expect(testRestaurant instanceof Restaurant).toBeTruthy()
     })
 
     test('restaurants have capacity', async() => {
         const testRestaurant = await Restaurant.findOne({where: {capacity: 50}});
-        const testRestaurant = await Restaurant.findOne({where: {capacity: 60}});
+        // const testRestaurant = await Restaurant.findOne({where: {capacity: 60}});
         expect(testRestaurant.capacity).toBe(50)
-        expect(testRestaurant.capacity).toBe('Jakes')
+        // expect(testRestaurant.capacity).toBe(60)
     })
 
     // beforeAll(async() => {
