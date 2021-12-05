@@ -18,9 +18,9 @@ describe('Restaurant Database', () => {
 
     test('restaurants have name', async() => {
         const testRestaurant = await Restaurant.findOne({where: {restaurantName: 'Dennys'}});
-        // const testRestaurant = await Restaurant.findOne({where: {restaurantName: 'Jakes'}});
+        const testRestaurant1 = await Restaurant.findOne({where: {restaurantName: 'Jakes'}});
         expect(testRestaurant.restaurantName).toBe('Dennys')
-        // expect(testRestaurant.restaurantName).toBe('Jakes')
+        expect(testRestaurant1.restaurantName).toBe('Jakes')
         expect(testRestaurant instanceof Restaurant).toBeTruthy()
     })
 
